@@ -1,0 +1,7 @@
+
+interface G1.14
+ ip address 155.1.14.4 255.255.255.0
+
+interface Lo0
+ ip address 150.1.4.4 255.255.255.255
+
