@@ -1,0 +1,13 @@
+hostname {{ name }}
+
+{% for intf in interfaces %}
+interface {{ intf.name }}
+ ip address {{ intf.ip }} {{ intf.subnet }}
+ no shutdown
+{% endfor %}
+
+router ospf 1
+ router-id {{ interfaces[1].ip }}
+ network 155.1.0.0 0.0.255.255 area 0
+ network 150.1.0.0 0.0.255.255 area 0
+
